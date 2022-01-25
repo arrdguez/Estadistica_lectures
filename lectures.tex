@@ -3,8 +3,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usetheme{EastLansing}
- \usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage[]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -475,7 +478,8 @@
       \subsubsection*{Tipos de gráficos estadístico}
 
       \begin{frame}{Gráficos estadístico. Representación de tronco y hoja}
-          Las gráficas de tallos y hojas son una forma rápida de obtener la representación visual informativade un conjunto de datos.
+          Las gráficas de tallos y hojas son una forma rápida de obtener la representación visual informativa
+de un conjunto de datos.
 
           Es un método exploratorio, que permite visualizar la distribución de los datos de una manera gráfica, pero sin llegar a elaborar un gráfico.
 
@@ -531,7 +535,8 @@
       \begin{frame}{Gráficos estadístico. Histogramas. Tabla de Frecuencias.}
           Para las distribuciones de frecuencias la representación gráfica más común es el histograma.
           \begin{block}{Frecuencia y Frecuencia relativa}
-              Considérense datos compuestos de observaciones de una variable discreta x. La\textbf{ frecuencia} de cualquier valor x particular es el número de veces que ocurre un valor en el conjunto de datos. La \textbf{frecuencia relativa} de un valor es la fracción o proporción de veces queocurre el valor. El cual se obtiene dividiendo la \textbf{frecuencia relativa} de un valor entre el \textbf{número de observaciones en el conjunto de datos}.
+              Considérense datos compuestos de observaciones de una variable discreta x. La\textbf{ frecuencia} de cualquier valor x particular es el número de veces que ocurre un valor en el conjunto de datos. La \textbf{frecuencia relativa} de un valor es la fracción o proporción de veces que
+ocurre el valor. El cual se obtiene dividiendo la \textbf{frecuencia relativa} de un valor entre el \textbf{número de observaciones en el conjunto de datos}.
 
           \end{block}
       \end{frame}
@@ -552,10 +557,37 @@
        \end{block}
       \end{frame}
 
+      \begin{frame}{Gráficos estadístico. Histogramas. Distribución de frecuencias agrupadas}
+          \begin{block}{Distribución de frecuencias agrupadas}
+            La distribución de frecuencias agrupadas o tabla con datos agrupados se emplea si las variables toman un número grande de valores o la variable es continua. Se agrupan los valores en intervalos que tengan la misma amplitud denominados clases. A cada clase se le asigna su frecuencia correspondiente.
+          \end{block}
+
+      \end{frame}
+
+      \begin{frame}{Gráficos estadístico. Histogramas. Distribución de frecuencias agrupadas}
+
+          \begin{block}{Límites de la clase}
+              Cada clase está delimitada por el límite inferior de la clase y el límite superior de la clase.
+          \end{block}
+          \begin{block}{Amplitud de la clase}
+              La amplitud de la clase es la diferencia entre el límite superior e inferior de la clase.
+          \end{block}
+          \begin{block}{Marca de clase}
+              La marca de clase es el punto medio de cada intervalo y es el valor que representa a todo el intervalo para el cálculo de algunos parámetros.
+
+              La marca de clase se representa por $c_i$
+
+              $$c_i = \dfrac{L_{sup} - L_{inf}}{2} $$
+          \end{block}
+      \end{frame}
+
+
       \begin{frame}{Gráficos estadístico. Histogramas}
         \pause
         \begin{block}{Construcción de un histograma}
-          En primer lugar, se determina la frecuencia y la frecuencia relativa de cada valor x.Luego se marcan los valores x posibles en una escala horizontal. Sobre cada valor, setraza un rectángulo cuya altura es la frecuencia relativa o alternativamente, la frecuencia de dicho valor.
+          En primer lugar, se determina la frecuencia y la frecuencia relativa de cada valor x.
+Luego se marcan los valores x posibles en una escala horizontal. Sobre cada valor, se
+traza un rectángulo cuya altura es la frecuencia relativa o alternativamente, la frecuencia de dicho valor.
         \end{block}
         \begin{figure}
             \centering
@@ -660,6 +692,193 @@
             \label{fig:graficosdispersion}
         \end{figure}
       \end{frame}
+
+
+
+
+    \subsection*{Medidas de tendencia central, localización y dispersión}
+      \begin{frame}{}
+          \begin{center}
+              {\LARGE Medidas de tendencia central, localización y dispersión}
+          \end{center}
+      \end{frame}
+      \begin{frame}{Introducción Medidas de tendencia central, localización y dispersión. }
+        Para describir un conjunto de datos se utilizan \textbf{medidas de resumen}, las cuales nos permiten \textbf{condensar} los datos de tal manera que con dos o tres valores obtenemos una idea sobre los \textit{valores alrededor de los cuales se agrupan los datos}, la \textit{dispersión de ese agrupamiento} y la forma de la \textit{distribución de los datos}.
+        \pause
+        Estos valores representativos se denominan \textbf{estadísticos} o \textbf{estadígrafos}. Su ventaja radica en que facilitan considerablemente el manejo de los datos y la transmisión de la información.
+      \end{frame}
+
+      \begin{frame}{Clases de estadísticos o estadígrafos}
+        \begin{enumerate}[<+->]
+            \item \textbf{Los estadísticos de posición o localización.} Indican alrededor de cuál valor se agrupan los datos obtenidos, interesando más en este curso los que caracterizan la tendencia central. La media, la mediana, la moda son los más comunes.
+            \item \textbf{Los estadísticos de dispersión.} Indican qué tan esparcidos están los datos obtenidos respecto de la medida o medidas de posición que se adopten.
+            \item \textbf{Los estadísticos de forma.} Estudian la asimetría – simetría y deformación respecto de una distribución modelo denominada distribución normal.
+            \item \textbf{Los estadísticos específicos.} Son propios de cada especialidad, por ejemplo el índice de mortalidad infantil en una población, el producto interno bruto, etc.
+        \end{enumerate}
+
+      \end{frame}
+
+      \subsubsection*{Estadísticos de posición y localización. Tendencia central}
+        \begin{frame}{}
+            \textbf{\begin{center}
+                  {\LARGE }  Estadísticos de posición y localización. Tendencia central
+            \end{center}}
+        \end{frame}
+
+        \begin{frame}{Estadísticos localización o tendencia central}
+          Las medidas de \textbf{posición} (\textbf{localización}) o \textbf{tendencia} nos facilitan información sobre la serie de datos que estamos analizando. Estas las podemos agrupas en dos tipos:
+          \\
+          \begin{itemize}[<+->]
+              \item [a)]Medidas de posición o tendencia central: informan sobre los valores medios de la serie de datos.
+              \begin{itemize}
+                  \item Medias (aritmética, aritmética ponderada, geométrica, armónica, etc.)
+                  \item Mediana
+                  \item Moda
+              \end{itemize}
+
+
+              \item[b)] Medidas de posición o tendencia no centrales: informan de como se distribuye el resto de los valores de la serie.
+              \begin{itemize}
+                  \item Cuartiles
+                  \item Deciles
+                  \item Percentiles
+              \end{itemize}
+          \end{itemize}
+          \pause
+          Este \'ultimo (\textbf{b}) también es reverenciado como Estadísticos de Localización.
+        \end{frame}
+
+        \begin{frame}{Estadísticos tendencia central. Media aritmética o promedio (MA)}
+            \begin{block}{Media aritmética o promedio (MA)}
+              Es la suma de todos los valores de la variable dividida entre el número total de elementos, N.
+              $$ \bar{X} = \dfrac{x_1+x_2+x_3+\cdots+x_{n-1}+x_n}{N}=\dfrac{\sum_{n=i}^{n}x_i}{N}$$
+            \end{block}
+            \pause
+            \begin{block}{Media aritmética o promedio (MA). Para el calculo de tablas sin agrupar.}
+              $$ \bar{X} =\dfrac{\sum_{n=i}^{n}x_in_i}{N}$$
+              donde $n_i$ representa la frecuencia absoluta del valor $x_i$
+            \end{block}
+
+        \end{frame}
+        \begin{frame}{Media aritmética o promedio (MA). Ejemplo}
+          \begin{block}{Ejemplo}
+            En un almacén de trigo se realizan determinaciones de humedad a varias muestras de harina, obteniendo los resultados de la tabla siguiente. Determine el \% de humedad promedio.
+            \begin{table}[!h]
+                \centering
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $x_i$, \% & $n_i$\\
+                    \hline
+                    10  & 3\\
+                    \hline
+                    11  & 2\\
+                    \hline
+                    12  & 3\\
+                    \hline
+                    13  & 2\\
+                    \hline
+                \end{tabular}
+            \end{table}
+          \end{block}
+          Empleando la ecuación:\\
+          $$ \bar{X} =\dfrac{\sum_{n=i}^{n}x_in_i}{N}$$
+        \end{frame}
+        \begin{frame}{Media aritmética o promedio (MA). Ejemplo}
+          Obtenemos:
+            \begin{table}[!h]
+                \centering
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                    $x_i$, \% & $n_i$ & $x_i* n_i$\\
+                    \hline
+                    10  & 3 & 30\\
+                    \hline
+                    11  & 2 & 22\\
+                    \hline
+                    12  & 3 & 36\\
+                    \hline
+                    13  & 2 & 26\\
+                    \hline
+                    Suma & 10 & 116\\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \pause
+        Sustituimos:\\
+        $$ \bar{X} =\dfrac{\sum x_in_i}{N}=\dfrac{116}{10}=11.6\%$$
+    \end{frame}
+        \begin{frame}{Media aritmética o promedio (MA). Propiedades}
+          Propiedades de la media:
+          \begin{itemize}
+              \item La suma de las desviaciones de los valores de la variable con respecto a la media aritmética es 0. La media aritmética equilibra esos desvíos, o sea, se puede considerar a la media como el centro de gravedad de los datos.
+              \item Si a todos los valores de la variable se le suma una misma cantidad, la media aritmética queda aumentada en dicha cantidad
+              \item Cuando a la media se la multiplica o divide por una constante, la nueva media queda multiplicada o dividida por dicha constante.
+          \end{itemize}
+          \pause
+          La media aritmética presenta un problema. Los valores extremos, influyen mucho en ella, restándole en ocasiones significación.
+        \end{frame}
+
+
+        \begin{frame}{Estadísticos tendencia central. Mediana (Me)}
+            \begin{block}{Mediana (Me)}
+                La mediana es el valor que deja por debajo y por encima de él el mismo  número de datos.
+            \end{block}
+            Observaciones:
+            \begin{itemize}
+                \item No presenta el problema de estar influida por los valores extremos.
+                \item No utiliza en su cálculo toda la información de la serie de datos.
+            \end{itemize}
+            Ejemplo:
+            \begin{center}
+               9, 1, 34, 8, 5, 10, 13, 17, 6
+            \end{center}
+            \pause
+            Solución:
+            \begin{center}
+              \colorbox{yellow}{  9, 1, 34, 8,}\textbf{\colorbox{green}{5}}\colorbox{yellow}{,10 , 13, 17, 6 }
+            \end{center}
+        \end{frame}
+
+        \begin{frame}{Estadísticos tendencia central. Mediana (Me)}
+           Los datos pueden estar agrupados o no.\\
+
+           \pause
+           Si los datos están sin agrupar: \\
+           Si el número de observaciones es impar, la mediana corresponde al valor central. Si el número de observaciones es par, la mediana corresponde al promedio entre los dos valores centrales.\\
+           Ejemplo para observaciones impar:
+           \begin{center}
+               \colorbox{yellow}{9, 1, 34, 8,}\colorbox{green}{5,}\colorbox{yellow}{10, 13, 17, 6 }
+           \end{center}
+
+           Ejemplo para observaciones par:
+
+           \begin{center}
+             \colorbox{yellow}{  9, 1, 34, 8}\colorbox{cyan}{, 10, 13, 17, 6 } \\
+             9
+           \end{center}
+        \end{frame}
+
+        \begin{frame}{Estadísticos tendencia central. Mediana (Me)}
+
+        \end{frame}
+
+
+
+
+
+
+
+      \subsubsection*{Estadísticos de posición o localización. Localización}
+        \begin{frame}{title}
+          content...
+        \end{frame}
+
+      \subsubsection*{Estadísticos de dispersión}
+        \begin{frame}{title}
+          content...
+        \end{frame}
+
+
 
 
     \begin{frame}
