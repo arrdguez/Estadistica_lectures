@@ -1,4 +1,7 @@
 \documentclass[11pt]{beamer}
+%\usefonttheme{professionalfonts}
+\usefonttheme{serif}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -803,10 +806,10 @@ traza un rectángulo cuya altura es la frecuencia relativa o alternativamente, l
                     \hline
                 \end{tabular}
             \end{table}
-        \pause
-        Sustituimos:\\
-        $$ \bar{X} =\dfrac{\sum x_in_i}{N}=\dfrac{116}{10}=11.6\%$$
-    \end{frame}
+          \pause
+          Sustituimos:\\
+          $$ \bar{X} =\dfrac{\sum x_in_i}{N}=\dfrac{116}{10}=11.6\%$$
+        \end{frame}
         \begin{frame}{Media aritmética o promedio (MA). Propiedades}
           Propiedades de la media:
           \begin{itemize}
@@ -835,7 +838,7 @@ traza un rectángulo cuya altura es la frecuencia relativa o alternativamente, l
             \pause
             Solución:
             \begin{center}
-              \colorbox{yellow}{  9, 1, 34, 8,}\textbf{\colorbox{green}{5}}\colorbox{yellow}{,10 , 13, 17, 6 }
+              \colorbox{yellow}{  9, 1, 34, 8,}\textbf{\colorbox{green}{5,}}\colorbox{yellow}{,10 , 13, 17, 6 }
             \end{center}
         \end{frame}
 
@@ -854,7 +857,8 @@ traza un rectángulo cuya altura es la frecuencia relativa o alternativamente, l
 
            \begin{center}
              \colorbox{yellow}{  9, 1, 34, 8}\colorbox{cyan}{, 10, 13, 17, 6 } \\
-             9
+
+             promedio entre 8 y 10 $ \Rightarrow$ 9
            \end{center}
         \end{frame}
 
@@ -862,20 +866,97 @@ traza un rectángulo cuya altura es la frecuencia relativa o alternativamente, l
 
         \end{frame}
 
+        \begin{frame}{Estadísticos tendencia central. Moda (Mo)}
+           Es el valor de la variable de mayor frecuencia. Se le usa en lugar de la media o la mediana, cuando se desea señalar el valor más típico o común del total de observaciones efectuadas. Cuando la distribución de datos presenta más de un máximo relativo, se le llama bimodal.
 
 
+           Cuando los datos están sin agrupar la moda se determina por la simple inspección de la lista ordenada:
 
+          \begin{center}
+            X:\colorbox{cyan}{10 10}\colorbox{yellow}{11}\colorbox{orange}{12}\colorbox{green}{13 13 13}\colorbox{pink}{14}\colorbox{magenta}{15 15}\colorbox{teal}{16}
+            \pause
 
+            la moda es  13
+          \end{center}
+
+           Cuando están agrupados es necesario aplicar fórmulas, por lo que resulta más sencillo utilizar los paquetes estadísticos.
+        \end{frame}
 
 
       \subsubsection*{Estadísticos de posición o localización. Localización}
-        \begin{frame}{title}
-          content...
+
+        \begin{frame}{Estadísticos tendencia central. Cuartiles, Deciles y Percentiles }
+
+          \begin{block}{Cuantiles}
+             Representa las fracciones del total, en otras palabras, la son cuartas partes del total. El primer quartil Q1 deja el 25\% de los valores por debajo. El segundo cuartil es igual a la mediana y el tercero Q3 deja el 75\%.
+          \end{block}
+
+          \pause
+
+          \begin{block}{Deciles}
+            Las fracciones son décimas partes del total. El primer decil D1 deja el 10\% de los valores por debajo y el resto por encima. El quinto decil es la mediana.
+          \end{block}
+
+          \pause
+
+          \begin{block}{Percentil}
+            Las fracciones son centésimas partes del total. Así, el percentil veinte (P20), deja el 20\% de los valores por debajo.
+          \end{block}
         \end{frame}
 
+
+
+
+
+
+
       \subsubsection*{Estadísticos de dispersión}
-        \begin{frame}{title}
-          content...
+
+        \begin{frame}{Medidas de dispersión}
+          Se denomina dispersión o variabilidad, a la mayor o menor separación de los valores de la muestra, respecto de las medidas de tendencia central que se hayan calculado.
+
+          Hay varios estadísticos para ello:
+          \begin{itemize}
+              \item Rango
+              \item Varianza
+              \item Desviación estándar
+              \item Desviación media
+          \end{itemize}
+        \end{frame}
+
+        \begin{frame}{Medidas de dispersión. El Rango}
+            Es la medida más simple y se define como la diferencia entre el valor máximo y el valor mínimo del grupo de datos:
+
+            \begin{center}
+                $$ R = X_{max}-X_{min}$$
+            \end{center}
+
+            Es sencilla de calcular y de fácil comprensión pero tiene la desventaja de ser la medida más grosera.
+
+            Dos grupos de datos con igual recorrido puede tener una dispersión diferente:
+        \end{frame}
+
+        \begin{frame}{Medidas de dispersión. La varianza}
+           \begin{block}{La varianza}
+               Se define la varianza como la sumatoria del cuadrado de las desviaciones de cada medición con respecto a la media aritmética dividida entre el número de mediciones.
+           \end{block}
+
+            Definamos la varianza como $s^2$ o $\sigma^2$.
+
+            $$s^2 = \dfrac{\sum_{i=1}^{n}(x_i-\bar{X})^2}{N}$$
+        \end{frame}
+
+        \begin{frame}{Medidas de dispersión. Desviación media}
+
+            $$D_m = \dfrac{\sum_{i=1}^{n}|x_i-\bar{X}|~}{N}$$
+        \end{frame}
+
+        \begin{frame}{Medidas de dispersión. Desviación estándar}
+            \begin{block}{Desviación estándar}
+              Si analizamos la fórmula, las unidades de la varianza están dadas en las unidades de la variable, pero elevadas al cuadrado. Para poder tener entonces una idea de la dispersión en las propias unidades de la variable, se toma la raíz cuadrada de este valor, que es la desviación estándar o típica
+            \end{block}
+
+            $$s =\sqrt{ \dfrac{\sum_{i=1}^{n}(x_i-\bar{X})^2}{N}}$$
         \end{frame}
 
 
