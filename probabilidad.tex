@@ -8,6 +8,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{cancel}
 \usetheme{EastLansing}
 \usepackage{graphicx}
 \usepackage[]{xcolor}
@@ -280,8 +281,8 @@ excluyentes.}
             \begin{itemize}
                 \item Diagrama de Árbol
                 \item Regla multiplicativa
-                \item Combinación
                 \item Permutación
+                \item Combinación
             \end{itemize}
         \end{frame}
 
@@ -319,14 +320,173 @@ excluyentes.}
                 $$ n_1n_2 = (6)(6) = 36 $$
             \end{block}
           \end{frame}
-        \subsubsection*{Combinación}
-          \begin{frame}{Combinación}
-            content...
+
+
+
+        \subsubsection*{Permutación y Combinación}
+          \begin{frame}{Definición de Factorial!}
+            \begin{block}{Definición de Factorial!}
+                El \textbf{factorial de un entero positivo} $n$ se define como el producto de todos los números enteros positivos desde 1 hasta n. \\Por ejemplo:
+
+               $$ 5!=1\times 2\times 3\times 4\times 5=120.$$
+
+            \end{block}
+            \begin{block}{Propiedades del de Factorial!}
+                $$ 0! = 1$$
+                $$ (1 + 4)! = 5! = 120$$
+                $$ (6 - 2)! = 4! = 24$$
+
+            \end{block}
           \end{frame}
-        \subsubsection*{Permutación}
-          \begin{frame}{Permutación}
-            content...
+
+          \begin{frame}{Propiedades del de Factorial!}
+
+            \begin{block}{Propiedades del de Factorial!}
+               $$\dfrac{5!}{7!} = \dfrac{5 \times 4 \times 3 \times 2 \times 1}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = \dfrac{\cancel{5!}}{7 \times 6 \times \cancel{5!}} = \dfrac{1}{7 \times 6} = \dfrac{1}{42}$$
+               Otro ejemplo:\\
+               \pause
+               $$\dfrac{4!}{2!} = \dfrac{4 \times 3 \times 2 \times 1}{2 \times 1} = \dfrac{4 \times 3 \times \cancel{2!}}{\cancel{2!}} = 4 \times 3 = 12$$
+            \end{block}
           \end{frame}
+
+          \begin{frame}{Permutación y Combinación}
+              Considérese un grupo de \textbf{\textit{n}}\textbf{ individuos u objetos distintos}.
+
+              - ¿Cuántas maneras existen de seleccionar un subconjunto de tamaño k del grupo?\\
+              \pause
+              \begin{block}{Ejemplos}
+                 \begin{itemize}
+                     \item Si un equipo de ligas menores tiene 15 jugadores registrados, ¿cuántas maneras existen de seleccionar 9 jugadores para una alineación inicial?
+                     \item Si en su librero tiene 10 libros de misterio no leídos y desea seleccionar 3 para llevarlos consigo en unas vacaciones cortas, ¿cuántas maneras existen de hacerlo?
+                 \end{itemize}
+              \end{block}
+          \end{frame}
+
+          \begin{frame}{Permutación y Combinación}
+              Una respuesta a la pregunta general que se acaba de plantear requiere distinguir entre
+dos casos.
+              \begin{itemize}
+                  \item El orden de selección importa.
+                  \item El orden de selección \textbf{NO} importa.
+              \end{itemize}
+
+              \pause
+              \begin{block}{Ejemplos}
+                  \begin{itemize}
+                      \item Con Jorge como lanzador y Daniela como receptor se obtiene una
+alineación diferente de aquella con Daniela como receptor y Jorge como lanzador.
+                      \item La selección del libro que va a leer no es importante.
+                  \end{itemize}
+              \end{block}
+
+          \end{frame}
+
+         \begin{frame}{Permutación y Combinación. Definición.}
+           \begin{block}{Definici\'on}
+               \underline{Un subconjunto ordenado se llama \textbf{permutación}}. El número de permutaciones de tamaño $k$ que se puede formar con los $n$ individuos u objetos en un grupo será denotado por $P_{k,n}$.\\
+               \pause
+               \underline{Un subconjunto no ordenado se llama \textbf{combinación}}. Una forma de denotar el
+número de combinaciones es $C_ {k,n}$, pero en su lugar se utilizará una notación que es bastante común en libros de probabilidad:$\binom{n}{k}$, que se lee “\textit{de n se eligen k}”.
+           \end{block}
+         \end{frame}
+
+         \begin{frame}{Permutación}
+           \begin{block}{Ejemplo}
+               Supongamos que tenemos un conjunto de cuatro individuos: \textit{a}, \textit{b}, \textit{c} y \textit{d}. De ellos solo dos van a ser elegidos para los puestos de \textit{presidente} y \textit{vicepresidente} en cierta junta directiva.\\
+               ¿Cuantas maneras exciten para seleccionar estos dos cargos?
+           \end{block}
+           \pause
+
+           \begin{center}
+               \begin{tabular}{ccc}
+               ab & ac & ad \\
+               ba & bc & bd \\
+               ca & cb & cd \\
+               da & db & dc \\
+           \end{tabular}
+           \end{center}
+           Total: 12 formas.\\
+           NOTA: Uno esta tentado a decir combinaciones sin embargo, el orden importa, por lo que son \textbf{permutaciones}.
+         \end{frame}
+
+         \begin{frame}{Permutación}
+             \begin{block}{Ejemplo}
+                 Supongamos que tenemos un conjunto de cuatro individuos: \textit{a}, \textit{b}, \textit{c} y \textit{d}. De ellos solo dos van a ser elegidos para los puestos de \textit{presidente} y \textit{vicepresidente} en cierta junta directiva.\\
+                 ¿Cuantas maneras exciten para seleccionar estos dos cargos?
+             \end{block}
+             \pause
+             \begin{center}
+                 \begin{tabular}{ccc}
+                     ab & ac & ad \\
+                     ba & bc & bd \\
+                     ca & cb & cd \\
+                     da & db & dc \\
+                 \end{tabular}
+             \end{center}
+             $$P_{k,n}=\dfrac{n!}{(n-k)!}$$
+             $$P_{k,n}=\dfrac{n!}{(n-k)!}=\dfrac{4!}{(4-2)!}=\dfrac{4 \times 3 \times \cancel{2!}}{\cancel{2!}}= 4 \times 3 = 12$$
+         \end{frame}
+
+
+         \begin{frame}{Permutación. Ejemplo}
+             \begin{block}{Ejemplo}
+               Existen diez asistentes de profesor disponibles para calificar exámenes en un curso. El examen se compone de cuatro preguntas y el
+profesor desea seleccionar un asistente diferente para calificar cada pregunta (sólo un asistente por pregunta). ¿De cuántas maneras se pueden elegir los asistentes para calificar?
+             \end{block}
+             \pause
+             n $=$ tamaño del grupo $=$ 10\\
+             k $=$ tamaño del subconjunto $=$ 4\\
+             $$P_{k,n}=\dfrac{n!}{(n-k)!} = \dfrac{10!}{(10-4)!}= \dfrac{10 \times 9 \times 8 \times 7 \times 6!}{6!}=$$
+             \pause
+             $$= \dfrac{10 \times 9 \times 8 \times 7 \times \cancel{6!}}{\cancel{6!}}= 10 \times 9 \times 8 \times 7= 5040$$
+         \end{frame}
+
+         \begin{frame}{}
+             \begin{center}
+                 \textbf{\huge Técnicas de conteo\\  Combinación}
+             \end{center}
+         \end{frame}
+
+         \begin{frame}{Combinación}
+             \begin{block}{Definici\'on}
+                 \underline{Un subconjunto no ordenado se llama \textbf{combinación}}. Una forma de denotar el número de combinaciones es $C_ {k,n}$, pero en su lugar se utilizará una notación que es bastante común en libros de probabilidad:$\binom{n}{k}$, que se lee “\textit{de n se eligen k}”.
+             \end{block}
+             \pause
+             Considérense ahora las combinaciones (es decir, subconjuntos ordenados). Tomando el ejemplo anterior, el de los cuatro individuos\\ \begin{center}
+                 \textit{a}, \textit{b}, \textit{c} y \textit{d}.
+             \end{center}
+         Supóngase que dos de los cuatro individuos tienen que ser seleccionados para que asistan a una conferencia. El orden de selección no es importante; lo que importa es cuáles dos son seleccionados.
+
+         \end{frame}
+
+         \begin{frame}{Combinación}
+            Considérense ahora las combinaciones (es decir, subconjuntos ordenados). Tomando el ejemplo anterior, el de los cuatro individuos\\ \begin{center}
+                 \textit{a}, \textit{b}, \textit{c} y \textit{d}.
+             \end{center}
+             Supóngase que dos de los cuatro individuos tienen que ser seleccionados para que asistan a una conferencia. El orden de selección no es importante; lo que importa es cuáles dos son seleccionados.
+
+             Nos percatamos que el orden de selección no es importante, da lo mismo seleccionar a \textit{\textbf{ab}} que a \textit{\textbf{ba}}.
+             \begin{center}
+                 ab $\Leftrightarrow$ ba
+             \end{center}
+             \begin{center}
+                 ab, ac, ad, bc, bd, cd
+             \end{center}
+         \end{frame}
+
+         \begin{frame}{Combinación}
+             \begin{block}{Combinación}
+               $$\binom{n}{k} = \dfrac{P_{k,n}}{k!} = \dfrac{n!}{k!(n-k)!} $$
+             \end{block}
+             Del ejemplo anterior tenemos:
+             $$\binom{n}{k} = \dfrac{n!}{k!(n-k)!} = \dfrac{4!}{2!(4-2)!}= \dfrac{4 \times 3 \times 2!}{2! \times 2!}=\dfrac{4 \times 3 \times \cancel{2!}}{2! \times \cancel{2!}}=$$
+             $$\dfrac{4 \times 3}{2} = 12/2 = 6$$
+             \pause
+
+             \begin{center}
+                 ab, ac, ad, bc, bd, cd
+             \end{center}
+         \end{frame}
 
 
       \subsection*{Conceptos de probabilidad}
