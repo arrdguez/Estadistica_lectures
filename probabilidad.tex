@@ -520,6 +520,37 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
             \end{block}
         \end{frame}
 
+        \begin{frame}{Ejemplo de la tienda de cámaras.}
+            \begin{block}{Ejemplo de la tienda de cámaras.}
+              Supóngase que de todos los individuos que compran cierta cámara digital, 60\% incluyeuna tarjeta de memoria opcional en su compra, 40\% incluyen una batería extra y 30\% incluyen tanto una tarjeta como una batería. \\
+
+              Considere seleccionar al azar un comprador y sea A = {tarjeta de memoria adquirida} y B = {batería adquirida}
+              Dado que el individuo seleccionado adquirió una batería extra, ¿cual es la probabilidad de haber adquirido una tarjeta opcional?
+            \end{block}
+            \begin{block}{Solución}
+               \begin{itemize}
+                   \item P(A) = \pause 0.60
+                   \item P(B) = \pause 0.40
+                   \item P(ambas adquiridas) = \pause P(A $\cap$ B) = 0.30
+               \end{itemize}
+            \end{block}
+        \end{frame}
+
+        \begin{frame}{Ejemplo de la tienda de cámaras.}
+
+            \begin{block}{Solución}
+                \begin{itemize}
+                    \item P(A) = \pause 0.60
+                    \item P(B) = \pause 0.40
+                    \item P(ambas adquiridas) = \pause P(A $\cap$ B) = 0.30
+                \end{itemize}
+
+            \end{block}
+            \pause
+            $$P(A|B)=\dfrac{P(A\cap B)}{P(B)} = \dfrac{0.3}{0.4} = 0.75 $$
+            Es decir, de todos los que adquieren una batería extra, 75\% adquirieron una tarjeta de memoria opcional.
+        \end{frame}
+
         \begin{frame}{Probabilidad Incondicionada}
           ¿Que sucede cuando los eventos son independientes entre si?\\
           \pause
@@ -652,6 +683,11 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
 
       \subsection*{Distribuciones Discretas de Probabilidad}
 
+        \begin{frame}
+            \textbf{\begin{center}
+                    \huge Distribuciones Discretas de Probabilidad
+            \end{center}}
+        \end{frame}
         \begin{frame}{Distribuciones de probabilidad de variables discretas}
           Existen varias distribuciones discretas con aplicación práctica, pero por el alcance de este curso haremos énfasis en la distribución binomial, pues tiene aplicación posterior en el Control de Calidad.
           \begin{itemize}
