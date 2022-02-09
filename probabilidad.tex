@@ -490,15 +490,205 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
 
 
       \subsection*{Conceptos de probabilidad}
+        \begin{frame}{Combinación}
+          \textbf{\begin{center}
+                   \huge Conceptos de probabilidad
+          \end{center}}
+        \end{frame}
 
-    \section*{Distribuciones Discretas de Probabilidad}
-    \begin{frame}{title}
-        content...
+        \begin{frame}{Probabilidad Condicionada}
+          En numerosas ocasiones, tendremos que modelar una situación en la que se dispone de información adicional, \textbf{debiendo condicionarse a sucesos o circunstancias}. Supongamos que estamos interesados en un suceso A; hemos asignado P(A) y nos informan que ha ocurrido el suceso B y queremos saber cómo cambian mis creencias sobre A.
+          \pause
+          \begin{block}{Probabilidad Condicionada}
+            Para dos eventos cualesquiera A y B con $P(B) >  0$, la \textbf{probabilidad condicional de A dado que B ha ocurrido} está definida por:
+            $$ P(A|B)=\dfrac{P(A\cap B)}{P(B)}$$
+          \end{block}
+
+        \end{frame}
+
+        \begin{frame}{Probabilidad Condicionada}
+
+            \begin{block}{Probabilidad Condicionada. Ejemplo}
+                Calcular la probabilidad de obtener un 6 al tirar un dado sabiendo que ha salido par.
+             \end{block}
+            \pause
+            \begin{block}{}
+                $$P(A)= \dfrac{1}{6} $$\\
+                $$P(B)= \dfrac{3}{6}$$
+                $$P(A\cap B) = \dfrac{1}{6}$$\\
+                $$ P(A|B)=\dfrac{P(A\cap B)}{P(B)} = \dfrac{\dfrac{1}{6}}{\dfrac{3}{6}}=\dfrac{1}{3}$$
+            \end{block}
+        \end{frame}
+
+        \begin{frame}{Probabilidad Incondicionada}
+          ¿Que sucede cuando los eventos son independientes entre si?\\
+          \pause
+          \begin{block}{Probabilidad Incondicionada}
+                      Dos sucesos, A y B, son independientes cuando la probabilidad de que suceda A no se ve afectada porque haya sucedido, o no, B.
+          \end{block}
+          Por ejemplo: Si lanzamos dos veces una moneda, el segundo resultado que obtengamos no estará influenciado por el primer resultado obtenido.\\
+          Como lo calculamos:
+          \pause
+          \begin{block}{Probabilidad Incondicionada}
+            $$ P(A|B)=\dfrac{P(A)P(B)}{P(B)}=P(A)$$
+            $$ P(A|B)=P(A)$$
+          \end{block}
     \end{frame}
 
 
+    \section*{Distribuciones Probabilidad}
+      \begin{frame}{}
+          \begin{center}
+              \textbf{\huge Distribuciones de Probabilidad}
+          \end{center}
+      \end{frame}
 
-    \section*{Distribuciones Continuas de Probabilidad}
+
+      \begin{frame}{Distribuciones de Probabilidad}
+          \begin{itemize}
+              \item Distribuciones Discretas de Probabilidad
+              \item Distribuciones Continuas de Probabilidad
+              \item Distribuciones Muestrales*
+          \end{itemize}
+      \end{frame}
+
+      \subsection*{Distribuciones Probabilidad}
+        \begin{frame}{Distribuciones de Probabilidad}
+            \begin{block}{Recordando}
+              El \textbf{espacio muestral} es el conjunto de resultados posibles del experimento aleatorio. Hay una gran variedad de experimentos aleatorios que nos pueden dar resultados tan diversos como: para lanzar una moneda  {sol ; águila}; para lanzar un dado  {1, 2, 3, 4, 5, 6}; para ver si una unidad cumple o no cumple especificaciones –{pasa, no pasa}; ver el pH de una muestra de agua {todo el conjunto de valores entre 6 y 9 digamos}; etc. \\
+              Esto quiere decir que de los experimentos aleatorios podemos obtener números, textos, valores booleanos (binarios), etc. En correspondencia tendremos variables aleatorias del mismo carácter.\\
+            \end{block}
+        \end{frame}
+
+
+        \begin{frame}{Distribuciones de Probabilidad}
+            \begin{block}{Recordando}
+                \begin{itemize}
+                    \item \textbf{Variable aleatoria discreta:} Puede tomar una cantidad finita de valores o infinita pero numerable. Esto quiere decir que sus valores son un número finito de números reales distintos.
+                    \item  \textbf{Variable aleatoria continua:} La cantidad de valores que puede adoptar es una cantidad infinita. Esto quiere decir que sus valores son un intervalo o una unión de intervalos sobre la recta de los números reales.
+                \end{itemize}
+            \end{block}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.3\linewidth]{images/estadistica8}
+                \label{fig:estadistica8}
+            \end{figure}
+
+        \end{frame}
+
+        \subsubsection*{Función de densidad de probabilidad}
+        \begin{frame}{Función de densidad de probabilidad}
+            \begin{itemize}
+                \item En general, cada uno de los valores posibles de una variable aleatoria puede tener una probabilidad distinta a los demás. Al conjunto de valores posibles, y la relación entre ellos y sus respectivas probabilidades, se lo conoce como distribución de probabilidad.
+                \item Las distribuciones de probabilidad pueden representarse a través de una tabla, una gráfica o una fórmula, en cuyo caso a tal regla de correspondencia se le denomina \textbf{función de densidad de probabilidad}.
+            \end{itemize}
+            \begin{block}{Propiedades}
+                \begin{itemize}
+                    \item Que no puede ser negativa en ningún punto
+                    \item La suma de las probabilidades de todos los valores posibles es igual a 1.
+                \end{itemize}
+            \end{block}
+        \end{frame}
+
+        \begin{frame}{Función de densidad de probabilidad}
+          \begin{block}{Ejemplo}
+             Consideremos a la variable aleatoria X como suma de los valores que se obtienen al lanzar un dado 2 veces. El espacio muestral es el conjunto {2,3,4,5,6,7,8,9,10,11,12}.
+          \end{block}
+          \begin{center}
+              \begin{tabular}{c|cccccc}
+                 i;j & 1 & 2 & 3 & 4 & 5 & 6 \\
+                  \hline
+                  1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+                  2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+                  3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+                  4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+                  5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+                  6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+              \end{tabular}
+          \end{center}
+        \end{frame}
+
+        \begin{frame}{Función de densidad de probabilidad}
+            Vea la tabla donde se expone la probabilidad asociada a cada valor y su histograma.
+            \begin{columns}
+                \begin{column}{0.4\textwidth}
+                    \begin{center}
+                        \begin{tabular}{c|c}
+                            X & P(X=x)\\
+                            \hline
+                            2 & 0.027 \\
+
+                            3 & 0.055 \\
+
+                            4 & 0.083 \\
+
+                            5 & 0.111 \\
+
+                            6 & 0.138 \\
+
+                            7 & 0.166 \\
+
+                            8 & 0.138 \\
+
+                            9 & 0.111 \\
+
+                            10 & 0.083 \\
+
+                            11 & 0.055 \\
+
+                            12 & 0.027 \\
+                        \end{tabular}
+                    \end{center}
+                \end{column}
+                \begin{column}{0.56\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[width=1\linewidth]{images/p1}
+                        \label{fig:p1}
+                    \end{figure}
+                \end{column}
+            \end{columns}
+        \end{frame}
+
+      \subsection*{Distribuciones Discretas de Probabilidad}
+
+        \begin{frame}{Distribuciones de probabilidad de variables discretas}
+          Existen varias distribuciones discretas con aplicación práctica, pero por el alcance de este curso haremos énfasis en la distribución binomial, pues tiene aplicación posterior en el Control de Calidad.
+          \begin{itemize}
+              \item La distribución binomial
+              \item
+              \item
+          \end{itemize}
+        \end{frame}
+
+
+        \subsubsection*{La distribución binomial}
+          \begin{frame}{Distribución binomial o experimento de Bernoulli}
+            Existen muchos experimentos que se ajustan exacta o aproximadamente a la siguiente listade requerimientos:
+            \begin{enumerate}
+                \item El experimento consta de una secuencia de \textit{n} experimentos más pequeños llamados ensayos, donde \textit{n} se fija antes del experimento.
+                \item Cada ensayo puede dar por resultado uno de los mismos dos resultados posibles, los cuales se denotan como éxito (E ) y falla (F).
+                \item Los ensayos son independientes, de modo que el resultado en cualquier ensayo particular no influye en el resultado de cualquier otro ensayo.
+                \item La probabilidad de éxito es constante de un ensayo a otro; esta probabilidad se denotapor p.
+            \end{enumerate}
+            En tal caso se tiene lo que se denomina un experimento binomial.
+          \end{frame}
+
+
+          \begin{frame}{Distribución binomial o experimento de Bernoulli}
+              Existen muchos experimentos que se ajustan exacta o aproximadamente a la siguiente listade requerimientos:
+              \begin{enumerate}
+                  \item El experimento consta de una secuencia de \textit{n} experimentos más pequeños llamados ensayos, donde \textit{n} se fija antes del experimento.
+                  \item Cada ensayo puede dar por resultado uno de los mismos dos resultados posibles, los cuales se denotan como éxito (E ) y falla (F).
+                  \item Los ensayos son independientes, de modo que el resultado en cualquier ensayo particular no influye en el resultado de cualquier otro ensayo.
+                  \item La probabilidad de éxito es constante de un ensayo a otro; esta probabilidad se denotapor p.
+              \end{enumerate}
+              En tal caso se tiene lo que se denomina un experimento binomial.
+          \end{frame}
+
+
+
+    \subsection*{Distribuciones Continuas de Probabilidad}
     \begin{frame}{title}
         \begin{block}{title}
             content...
@@ -507,7 +697,7 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
 
 
 
-    \section*{Distribuciones Muestrales}
+    \subsection*{Distribuciones Muestrales}
     \begin{frame}{title}
         \begin{block}{title}
             content...
