@@ -513,16 +513,19 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
              \end{block}
             \pause
             \begin{block}{}
-                $$P(A)= \dfrac{1}{6} $$\\
-                $$P(B)= \dfrac{3}{6}$$
-                $$P(A\cap B) = \dfrac{1}{6}$$\\
-                $$ P(A|B)=\dfrac{P(A\cap B)}{P(B)} = \dfrac{\dfrac{1}{6}}{\dfrac{3}{6}}=\dfrac{1}{3}$$
+                $$P(A)= \pause \dfrac{1}{6} $$\\
+
+                $$P(B)= \pause \dfrac{3}{6}$$
+                $$P(A\cap B) = \pause \dfrac{1}{6}$$\\
+
+                $$ P(A|B)=\dfrac{P(A\cap B)}{P(B)} = \pause \dfrac{\dfrac{1}{6}}{\dfrac{3}{6}}=\dfrac{1}{3}$$
             \end{block}
         \end{frame}
 
         \begin{frame}{Ejemplo de la tienda de cámaras.}
             \begin{block}{Ejemplo de la tienda de cámaras.}
-              Supóngase que de todos los individuos que compran cierta cámara digital, 60\% incluyeuna tarjeta de memoria opcional en su compra, 40\% incluyen una batería extra y 30\% incluyen tanto una tarjeta como una batería. \\
+              Supóngase que de todos los individuos que compran cierta cámara digital, 60\% incluye
+una tarjeta de memoria opcional en su compra, 40\% incluyen una batería extra y 30\% incluyen tanto una tarjeta como una batería. \\
 
               Considere seleccionar al azar un comprador y sea A = {tarjeta de memoria adquirida} y B = {batería adquirida}
               Dado que el individuo seleccionado adquirió una batería extra, ¿cual es la probabilidad de haber adquirido una tarjeta opcional?
@@ -586,14 +589,15 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
       \subsection*{Distribuciones Probabilidad}
         \begin{frame}{Distribuciones de Probabilidad}
             \begin{block}{Recordando}
-              El \textbf{espacio muestral} es el conjunto de resultados posibles del experimento aleatorio. Hay una gran variedad de experimentos aleatorios que nos pueden dar resultados tan diversos como: para lanzar una moneda  {sol ; águila}; para lanzar un dado  {1, 2, 3, 4, 5, 6}; para ver si una unidad cumple o no cumple especificaciones –{pasa, no pasa}; ver el pH de una muestra de agua {todo el conjunto de valores entre 6 y 9 digamos}; etc. \\
+              El \textbf{espacio muestral} \pause es el conjunto de resultados posibles del experimento aleatorio. Hay una gran variedad de experimentos aleatorios que nos pueden dar resultados tan diversos como: para lanzar una moneda  \textit{{sol ; águila}}; para lanzar un dado  \textit{{1, 2, 3, 4, 5, 6}}; para ver si una unidad cumple o no cumple especificaciones \textit{{pasa, no pasa}}; ver el pH de una muestra de agua \textit{{todo el conjunto de valores entre 6 y 9 digamos}}; etc. \\
+              \pause
               Esto quiere decir que de los experimentos aleatorios podemos obtener números, textos, valores booleanos (binarios), etc. En correspondencia tendremos variables aleatorias del mismo carácter.\\
             \end{block}
         \end{frame}
 
 
         \begin{frame}{Distribuciones de Probabilidad}
-            \begin{block}{Recordando}
+            \begin{block}{Ampliando el concepto previo de variables.}
                 \begin{itemize}
                     \item \textbf{Variable aleatoria discreta:} Puede tomar una cantidad finita de valores o infinita pero numerable. Esto quiere decir que sus valores son un número finito de números reales distintos.
                     \item  \textbf{Variable aleatoria continua:} La cantidad de valores que puede adoptar es una cantidad infinita. Esto quiere decir que sus valores son un intervalo o una unión de intervalos sobre la recta de los números reales.
@@ -625,6 +629,7 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
           \begin{block}{Ejemplo}
              Consideremos a la variable aleatoria X como suma de los valores que se obtienen al lanzar un dado 2 veces. El espacio muestral es el conjunto {2,3,4,5,6,7,8,9,10,11,12}.
           \end{block}
+          \pause
           \begin{center}
               \begin{tabular}{c|cccccc}
                  i;j & 1 & 2 & 3 & 4 & 5 & 6 \\
@@ -692,46 +697,305 @@ profesor desea seleccionar un asistente diferente para calificar cada pregunta (
           Existen varias distribuciones discretas con aplicación práctica, pero por el alcance de este curso haremos énfasis en la distribución binomial, pues tiene aplicación posterior en el Control de Calidad.
           \begin{itemize}
               \item La distribución binomial
-              \item
-              \item
+              \item Hipergeométrica
+              \item Poisson
           \end{itemize}
         \end{frame}
 
 
         \subsubsection*{La distribución binomial}
           \begin{frame}{Distribución binomial o experimento de Bernoulli}
-            Existen muchos experimentos que se ajustan exacta o aproximadamente a la siguiente listade requerimientos:
+            Existen muchos experimentos que se ajustan exacta o aproximadamente a la siguiente lista
+de requerimientos:
             \begin{enumerate}
                 \item El experimento consta de una secuencia de \textit{n} experimentos más pequeños llamados ensayos, donde \textit{n} se fija antes del experimento.
-                \item Cada ensayo puede dar por resultado uno de los mismos dos resultados posibles, los cuales se denotan como éxito (E ) y falla (F).
+                \item Cada ensayo puede dar por resultado uno de los mismos dos resultados posibles, los cuales se denotan como éxito (\textbf{E}) y falla (\textbf{F}).
                 \item Los ensayos son independientes, de modo que el resultado en cualquier ensayo particular no influye en el resultado de cualquier otro ensayo.
-                \item La probabilidad de éxito es constante de un ensayo a otro; esta probabilidad se denotapor p.
+                \item La probabilidad de éxito es constante de un ensayo a otro; esta probabilidad se denota por \textbf{p}.
             \end{enumerate}
             En tal caso se tiene lo que se denomina un experimento binomial.
           \end{frame}
 
 
           \begin{frame}{Distribución binomial o experimento de Bernoulli}
-              Existen muchos experimentos que se ajustan exacta o aproximadamente a la siguiente listade requerimientos:
+              En este  experimento binomial, emplearemos las siguiente notación, el número de ensayos se denota con \textbf{n}, la probabilidad de éxito con \textbf{p} y la de fracaso con \textbf{q}.
+
+              Hay que notar que las probabilidades de éxito y de fracaso están relacionadas de la siguiente manera: $p + q = 1.$
+              La función de probabilidad es:
+
+              $$P(X=x)=\binom{n}{x}p^xq^{n-x}=\dfrac{n!}{x!(n-x)!}p^xq^{n-x}$$
+              donde
+              $$x=1, 2, 3, \cdots ,n $$
+          \end{frame}
+          \begin{frame}{Distribución binomial. Ejemplo 1}
+
+              \begin{block}{Ejemplo 1}
+                 ¿Cuál es la probabilidad de obtener 3 águilas al lanzar una moneda 5 veces?
+              \end{block}
+              \begin{block}{Solución}
+                 \begin{itemize}
+                     \item \textbf{x} \pause es el número de éxitos, en este ejemplo igual a 3 (en cada éxito decíamos que la variable toma el valor 1, como son 3 aciertos, entonces $x = 3$)
+                     \item \textbf{n} \pause es el número de ensayos. En nuestro ejemplo son 5.
+                     \item \textbf{p} \pause es la probabilidad de éxito, es decir, que salga águila al lanzar la moneda. Por lo tanto $p = 0.5$.
+                 \end{itemize}
+                 \pause
+                 $$P(X=3)=\dfrac{n!}{x!(n-x)!}p^xq^{n-x}= \pause \dfrac{5!}{3!(5-3)!}0.5^3(1-0.5)^{5-3}=0.3125\Rightarrow31.25\%$$
+              \end{block}
+          \end{frame}
+
+          \begin{frame}{Distribución binomial. Ejemplo 2}
+            \begin{block}{Ejemplo 2}
+                De acuerdo a una encuesta, \textbf{la probabilida}d de que un cliente compre un nuevo producto que se está introduciendo en el mercado,\textbf{ es de 0.6}. Hallar la probabilidad de que al entrar \textbf{10 clientes} a una tienda \textbf{lo compren 5 clientes}. ¿Cuál será la probabilidad de que lo compren al menos 5 clientes? \\
+                Grafique las probabilidades y vea como se afectan si p = 0.7.
+            \end{block}
+            \begin{block}{Solución}
+               \begin{itemize}
+                   \item \textbf{x} \pause van a ser: 5 y para la gráfica los valores del 1 al 10.
+                   \item \textbf{n} \pause es el número de ensayos. En nuestro ejemplo son 10.
+                   \item \textbf{p} \pause es la probabilidad de éxito, 0.6 y 0.7.
+               \end{itemize}
+               Calculemos la tabla de la distribución binomial con Excel.
+            \end{block}
+          \end{frame}
+
+          \begin{frame}{Distribución binomial. Ejemplo 2}
+              \begin{block}{Ejemplo 2}
+                   Hallar la probabilidad de que al entrar \textbf{10 clientes} a una tienda \textbf{lo compren 5 clientes}. ¿Cuál será la probabilidad de que lo compren al menos 5 clientes? \\
+              \end{block}
+
+          \end{frame}
+          \begin{frame}{Distribución binomial. Ejemplo 2}
+
+              \begin{block}{Solución. Tabla}
+                  \begin{center}
+                      \begin{tabular}{|c|c|c|c|c|}
+                      \hline
+                      x &F p=0.6  &F p=0.7  &P(x)(p=0.6) &P(x)(p=0.7)   \\
+                      \hline
+                      0 & 0.00010 & 0.00001 & 0.00010 & 0.00001  \\
+                      1 & 0.00168 & 0.00014 & 0.00157 & 0.00014  \\
+                      2 & 0.01229 & 0.00159 & 0.01062 & 0.00145  \\
+                      3 & 0.05476 & 0.01059 & 0.04247 & 0.00900  \\
+                      4 & 0.16624 & 0.04735 & 0.11148 & 0.03676  \\
+                      5 & 0.36690 & 0.15027 & 0.20066 & 0.10292  \\
+                      6 & 0.61772 & 0.35039 & 0.25082 & 0.20012  \\
+                      7 & 0.83271 & 0.61722 & 0.21499 & 0.26683  \\
+                      8 & 0.95364 & 0.85069 & 0.12093 & 0.23347  \\
+                      9 & 0.99395 & 0.97175 & 0.04031 & 0.12106  \\
+                      10 & 1.00000 & 1.00000 & 0.00605 & 0.02825  \\
+                      \hline
+                  \end{tabular}
+                  \end{center}
+              \end{block}
+          \end{frame}
+          \begin{frame}{Distribución binomial. Ejemplo 2}
+
+              \begin{block}{Solución}
+                  La primera pregunta arroja 0.20066, o sea un 20.1 \% de probabilidad de que 5 clientes compren el producto.
+
+                  La respuesta a la 2da pregunta es muy sencilla, es el valor de lo acumulado hasta 5 clientes que es 0.3669, o sea un 36.7\%.
+              \end{block}
+              \vspace{-0.23cm}
+                  \begin{figure}
+                      \centering
+                      \includegraphics[width=0.5\linewidth]{images/estadistica9}
+                      \label{fig:estadistica9}
+                  \end{figure}
+              \vspace{-0.23cm}
+              La gráfica muestra que al aumentar la aceptación, la probabilidad máxima de compra se desplaza de 6 a 7 clientes.
+          \end{frame}
+
+          \begin{frame}{Distribución Hipergeométrica}
+            Es similar a la binomial, pero con un tamaño de muestra grande en relación al tamaño de la población.
+          \end{frame}
+
+          \begin{frame}{Distribución De Poisson}
+              Una variable de tipo Poisson cuenta el número de sucesos por unidad de tiempo, área, volumen, etc.  El experimento que la genera debe cumplir las siguientes condiciones:
               \begin{enumerate}
-                  \item El experimento consta de una secuencia de \textit{n} experimentos más pequeños llamados ensayos, donde \textit{n} se fija antes del experimento.
-                  \item Cada ensayo puede dar por resultado uno de los mismos dos resultados posibles, los cuales se denotan como éxito (E ) y falla (F).
-                  \item Los ensayos son independientes, de modo que el resultado en cualquier ensayo particular no influye en el resultado de cualquier otro ensayo.
-                  \item La probabilidad de éxito es constante de un ensayo a otro; esta probabilidad se denotapor p.
+                  \item El número de éxitos que ocurren en cada región del tiempo o del espacio es independiente de lo que ocurra en cualquier otro tiempo o espacio disjunto del anterior.
+                  \item La probabilidad de un‚ éxito en un tiempo o espacio pequeño es proporcional al tamaño de este y no depende de lo que ocurra fuera de él.
+                  \item La probabilidad de encontrar uno o más‚ éxitos en una región del tiempo o del espacio tiende a cero a medida que se reducen las dimensiones de la región en estudio.
               \end{enumerate}
-              En tal caso se tiene lo que se denomina un experimento binomial.
+          $$ P(X=x)=\dfrac{e^{-\lambda}\lambda^x}{x!} $$
+          donde $x = 0, 1, 2, 3, ...$
+
           \end{frame}
 
 
-
     \subsection*{Distribuciones Continuas de Probabilidad}
-    \begin{frame}{title}
-        \begin{block}{title}
-            content...
+
+      \begin{frame}{}
+         \begin{center}
+            \textbf{ \huge
+               Distribuciones Continuas de Probabilidad}
+         \end{center}
+      \end{frame}
+
+
+      \begin{frame}{Valores de la variable aleatoria }
+          \begin{figure}
+              \centering
+              \includegraphics[width=0.5\linewidth]{images/p1}
+          \end{figure}
+          \pause
+          \begin{itemize}
+              \item Los datos que se colectan no sean completamente exactos
+              \item Datos distribuidos, datos de forma discreta
+              \item Se trabaja en intervalos
+          \end{itemize}
+          \pause
+          Sin embargo, se pueden realizar aproximaciones y describir la probabilidad asociada a los valores de la variable aleatoria utilizando de modelos teóricos de probabilidad cuya gráfica es una línea continua.
+      \end{frame}
+
+      \begin{frame}{Distribuciones Continuas de Probabilidad}
+          \begin{figure}
+              \centering
+              \includegraphics[width=0.7\linewidth]{images/estadistica10}
+              \label{fig:estadistica10}
+          \end{figure}
+
+      \end{frame}
+
+      \begin{frame}{Distribuciones Continuas de Probabilidad}
+
+        \begin{block}{Distribuciones Continuas de Probabilidad}
+          \begin{itemize}
+            \item Normal
+            \item Chi cuadrada
+            \item F de Fisher
+            \item Uniforme *
+            \item Exponencial *
+          \end{itemize}
+        ´\end{block}
+      \end{frame}
+
+      \begin{frame}{DCP. Distribución Normal}
+          La distribución normal es la más importante en toda la probabilidad y estadística. Muchas poblaciones numéricas tienen distribuciones que pueden ser representadas muy fielmente poruna curva normal apropiada.
+          \pause
+          \begin{block}{Distribuci\'on Normal}
+            Se dice que una variable aleatoria continua $X$ tiene una distribución normal con parámetros $\mu$ y $\sigma$ (o $\mu$ y $\sigma^2$ ), donde $-\infty < \mu < \infty$ y $\sigma > 0$ o, si la función de densidad deprobabilidad de $X$ es:
+            \pause
+            $$f(x; \mu,\sigma) = \dfrac{1}{\sigma\sqrt{2\pi}} \exp^{-\dfrac{(x-\mu)^2}{2\sigma^2}} ,\quad -\infty < x < \infty$$
+            $$e: 2.71828$$
+            $$\pi: 3.14159$$
+          \end{block}
+      \end{frame}
+
+      \begin{frame}{DCP. Distribución Normal. Propiedades}
+          \begin{figure}
+              \centering
+              \includegraphics[width=0.7\linewidth]{images/estadistica11}
+              \label{fig:estadistica11}
+          \end{figure}
+
+          \begin{block}{Distribuci\'on Normal}
+              \begin{itemize}
+                  \item $\mu$: es el valor medio de la distribución y es precisamente donde se sitúa el centro de la curva (de la campana de Gauss).
+                  \item $\sigma^2$: es la varianza. Indica si los valores están más o menos alejados del valor central: si la varianza es baja los valores están próximos a la media; si es alta, entonces los valores están muy dispersos.
+              \end{itemize}
+          \end{block}
+      \end{frame}
+
+      \begin{frame}{DCP. Distribución Normal. Propiedades}
+          \begin{figure}
+              \centering
+              \includegraphics[width=0.55\linewidth]{images/estadistica11}
+              \label{fig:estadistica11}
+          \end{figure}
+
+          \begin{block}{Distribuci\'on Normal}
+             \begin{enumerate}
+                 \item Los valores de la curva son positivos.
+                 \item La curva es simétrica con respecto al valor de la media.
+                 \item La curva tiene un valor máximo en el valor de la media.
+                 \item La curva tiene puntos de inflexión en aquellos valores de x para los cuales a la media se le suma o se le resta una desviación estándar.
+                 \item La curva, en sus extremos izquierdo y derecho, tiende a acercarse infinitamente al valor cero, es decir, el eje de las abscisas es asíntota horizontal.
+                 \item El área bajo la curva es la unidad.
+             \end{enumerate}
+          \end{block}
+      \end{frame}
+
+      \begin{frame}{Distribución normal estándar o Distribución normal tipificada}
+        \begin{block}{Distribución normal estándar}
+          La distribución normal con valores de parámetro $\mu = 0$ y $\sigma = 1$ se llama \textbf{distribución normal estándar}. Una variable aleatoria que tiene una distribución normal estándar se llama \textbf{variable aleatoria normal estándar} y se denotará por $Z$. La funciónde densidad de probabilidad de $Z$ es:
+           $$f(z; 0, 1) = \dfrac{1}{\sqrt{2\pi}} \exp^{\dfrac{-z^2}{2}} ,\quad -\infty < z < \infty$$
+           La gráfica de $f(z; 0, 1)$ se llama \textbf{\textit{curva normal estándar}}. La función de distribución acumulativa de $Z$ es $P(Z\leq z) = \Phi(z)$.
         \end{block}
-    \end{frame}
+        Con esta expresión se calcul\'o de forma numérica la tabla de frecuencias, con la cual vamos a trabajar a continuación.
+      \end{frame}
+
+      \begin{frame}{Distribución normal estándar o Distribución normal tipificada}
+          \begin{block}{¿Cómo utilizar la tabla?}
+              La columna de la izquierda indica el valor cuya probabilidad acumulada queremos conocer (x). La primera fila nos indica el segundo decimal del valor que estamos consultando, tolerancia para el calculo de error, vamos a tomar 0.05 (pues es el m\'as común).
+          \end{block}
+          \begin{block}{Ejemplo}
+              Determínense las siguientes probabilidades normales estándar:
+              \begin{itemize}
+                  \item[a] $P(Z \leq 1.25)$
+                  \item[b] $P(Z >1.25)$
+                  \item[c] $P(Z \leq -1.25)$
+                  \item[d] $P(-0.38 \leq Z \leq 1.25)$
+              \end{itemize}
+          \end{block}
+      \end{frame}
+
+      \begin{frame}{El ejemplo}
+          \begin{block}{Ejemplo}
+              Determínense las siguientes probabilidades normales estándar:
+              \begin{itemize}
+                  \item[a] $P(Z \leq 1.25)$
+                  \item[b] $P(Z >1.25)$
+                  \item[c] $P(Z \leq -1.25)$
+                  \item[d] $P(-0.38 \leq Z \leq 1.25)$
+              \end{itemize}
+          \end{block}
+          \begin{itemize}
+              \item[a, b]
+          \end{itemize}
+          \begin{figure}
+              \centering
+              \includegraphics[width=1\linewidth]{images/estadistica12}
+              \label{fig:estadistica12}
+          \end{figure}
+
+      \end{frame}
+      \begin{frame}{El ejemplo}
+          \begin{block}{Ejemplo}
+              Determínense las siguientes probabilidades normales estándar:
+              \begin{itemize}
+                  \item[a] $P(Z \leq 1.25)$
+                  \item[b] $P(Z >1.25)$
+                  \item[c] $P(Z \leq -1.25)$
+                  \item[d] $P(-0.38 \leq Z \leq 1.25)$
+              \end{itemize}
+          \end{block}
+          \begin{itemize}
+              \item[c, d]
+          \end{itemize}
+          \begin{figure}
+              \centering
+              \includegraphics[width=1\linewidth]{images/estadistica13}
+              \label{fig:estadistica12}
+          \end{figure}
+
+      \end{frame}
+
+      \begin{frame}{Ejercicio 1}
+          \begin{block}{Ejercicio 1}
+              \begin{itemize}
+                  \item Busque en la tabla las probabilidades acumuladas hasta los valores 0.71, 1.83, 2.25
+                  \item Halle los valores de X que corresponden a probabilidades acumuladas de 0.75, 0.80, 0.90 y 0.95.
+              \end{itemize}
+          \end{block}
+      \end{frame}
 
 
+      \subsubsection*{$\sigma^2$}
+        \begin{frame}{}
+\begin{center}
+    \textbf{            \huge Distribución $\sigma^2$}
+\end{center}
+        \end{frame}
 
     \subsection*{Distribuciones Muestrales}
     \begin{frame}{title}
