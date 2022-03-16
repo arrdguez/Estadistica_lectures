@@ -870,10 +870,12 @@ de requerimientos:
       \end{frame}
 
       \begin{frame}{DCP. Distribución Normal}
-          La distribución normal es la más importante en toda la probabilidad y estadística. Muchas poblaciones numéricas tienen distribuciones que pueden ser representadas muy fielmente poruna curva normal apropiada.
+          La distribución normal es la más importante en toda la probabilidad y estadística. Muchas poblaciones numéricas tienen distribuciones que pueden ser representadas muy fielmente por
+una curva normal apropiada.
           \pause
           \begin{block}{Distribuci\'on Normal}
-            Se dice que una variable aleatoria continua $X$ tiene una distribución normal con parámetros $\mu$ y $\sigma$ (o $\mu$ y $\sigma^2$ ), donde $-\infty < \mu < \infty$ y $\sigma > 0$ o, si la función de densidad deprobabilidad de $X$ es:
+            Se dice que una variable aleatoria continua $X$ tiene una distribución normal con parámetros $\mu$ y $\sigma$ (o $\mu$ y $\sigma^2$ ), donde $-\infty < \mu < \infty$ y $\sigma > 0$ o, si la función de densidad de
+probabilidad de $X$ es:
             \pause
             $$f(x; \mu,\sigma) = \dfrac{1}{\sigma\sqrt{2\pi}} \exp^{-\dfrac{(x-\mu)^2}{2\sigma^2}} ,\quad -\infty < x < \infty$$
             $$e: 2.71828$$
@@ -917,7 +919,8 @@ de requerimientos:
 
       \begin{frame}{Distribución normal estándar o Distribución normal tipificada}
         \begin{block}{Distribución normal estándar}
-          La distribución normal con valores de parámetro $\mu = 0$ y $\sigma = 1$ se llama \textbf{distribución normal estándar}. Una variable aleatoria que tiene una distribución normal estándar se llama \textbf{variable aleatoria normal estándar} y se denotará por $Z$. La funciónde densidad de probabilidad de $Z$ es:
+          La distribución normal con valores de parámetro $\mu = 0$ y $\sigma = 1$ se llama \textbf{distribución normal estándar}. Una variable aleatoria que tiene una distribución normal estándar se llama \textbf{variable aleatoria normal estándar} y se denotará por $Z$. La función
+de densidad de probabilidad de $Z$ es:
            $$f(z; 0, 1) = \dfrac{1}{\sqrt{2\pi}} \exp^{\dfrac{-z^2}{2}} ,\quad -\infty < z < \infty$$
            La gráfica de $f(z; 0, 1)$ se llama \textbf{\textit{curva normal estándar}}. La función de distribución acumulativa de $Z$ es $P(Z\leq z) = \Phi(z)$.
         \end{block}
@@ -932,7 +935,8 @@ de requerimientos:
               Determínense las siguientes probabilidades normales estándar:
               \begin{itemize}
                   \item[a] $P(Z \leq 1.25)$
-                  \item[b] $P(Z >1.25)$
+                  \item[b] $P(Z >
+1.25)$
                   \item[c] $P(Z \leq -1.25)$
                   \item[d] $P(-0.38 \leq Z \leq 1.25)$
               \end{itemize}
@@ -944,7 +948,8 @@ de requerimientos:
               Determínense las siguientes probabilidades normales estándar:
               \begin{itemize}
                   \item[a] $P(Z \leq 1.25)$
-                  \item[b] $P(Z >1.25)$
+                  \item[b] $P(Z >
+1.25)$
                   \item[c] $P(Z \leq -1.25)$
                   \item[d] $P(-0.38 \leq Z \leq 1.25)$
               \end{itemize}
@@ -964,7 +969,8 @@ de requerimientos:
               Determínense las siguientes probabilidades normales estándar:
               \begin{itemize}
                   \item[a] $P(Z \leq 1.25)$
-                  \item[b] $P(Z >1.25)$
+                  \item[b] $P(Z >
+1.25)$
                   \item[c] $P(Z \leq -1.25)$
                   \item[d] $P(-0.38 \leq Z \leq 1.25)$
               \end{itemize}
@@ -990,19 +996,131 @@ de requerimientos:
       \end{frame}
 
 
-      \subsubsection*{$\sigma^2$}
+      \subsubsection*{Distribución "\textbf{ji cuadrada}"}
+
         \begin{frame}{}
-\begin{center}
-    \textbf{            \huge Distribución $\sigma^2$}
-\end{center}
+          \begin{center}
+            \textbf{            \huge Distribución "\textbf{ji cuadrada}"}
+          \end{center}
         \end{frame}
 
-    \subsection*{Distribuciones Muestrales}
-    \begin{frame}{title}
-        \begin{block}{title}
-            content...
-        \end{block}
-    \end{frame}
 
+        \begin{frame}{Definición importante}
+            \begin{block}{Funci\'on Gamma($\Gamma$)}
+                $$\Gamma = \int_0^\infty x^{\alpha -1} e^{-x}\; \mathrm{d}x$$
+            \end{block}
+            La \textbf{función Gamma}: Es una integral impropia, que no tiene solución analítica directa, con propiedades especiales que permiten su utilización en la generalización de la función factorial y el desarrollo de la transformada de Laplace. También se utiliza en estadísticas para el cálculo de funciones de distribución de probabilidad.
+        \end{frame}
+
+        \begin{frame}{Distribución "\textbf{ji cuadrada}"}
+          \begin{block}{Definici\'on}
+             Sea un entero positivo. Se dice entonces que una variable aleatoria $X$ tiene una distribución \textbf{ji cuadrada} con parámetro si la función de densidad de probabilidad de $X$ es la densidad gama con $\alpha = \nu/2$ y $\beta = 2$. La función de densidad de probabilidad de una variable aleatoria ji cuadrada es por lo tanto:
+             \pause
+             $$ \begin{cases}
+                 \dfrac{1}{2^{^{\nu}/_2}\Gamma(^{\nu}/_2)}x^{(^{\nu}/_2)-1}e^{^{-x}/_2}       & \quad x \geq 0\\
+                 0  & \quad x < 0
+             \end{cases}$$
+         donde: ´$\nu$ representa los grados de libertad.
+          \end{block}
+
+          Nos interesa esta distribución para estudiar la variabilidad de los datos en una población.
+        \end{frame}
+
+        \begin{frame}{Distribución "\textbf{ji cuadrada}"}
+
+        \end{frame}
+    \subsection*{Distribuciones F-Fisher}
+      \begin{frame}
+          \textbf{\begin{center}
+                 \huge Distribuciones F-Fisher
+          \end{center}}
+      \end{frame}
+      \begin{frame}{Distribuciones F-Fisher}
+        Se emplea para probar si dos muestras provienen de poblaciones que poseen varianzas iguales. Lo cual es útil para determinar si una población normal tiene una mayor variación que otra.
+        \pause
+        \begin{block}{Distribuciones F-Fisher}
+           Sea $X_1 , . . . , X_m$ una muestra aleatoria de una distribución normal con varianza $\sigma^2_1$ , sea
+$Y_1 , . . . , Y_n$ otra muestra aleatoria (independiente de las $X_i$ ) de una distribución normal
+con varianza  $\sigma^2_2$ , y sean $S^2_1$ y $S^2_2$ las dos varianzas muestrales. Entonces la variable aleatoria
+           $$ F = \dfrac{S^2_1/\sigma^2_1}{S^2_2/\sigma^2_2}$$
+           tiene una distribución $F$ con $\nu_1 = m - 1$ y $\nu_2 = m - 1$. Siendo $\nu$ los grados de libertad y $m$ el tamaño de la muestra.
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{Distribuciones F-Fisher}
+        Prueba $F$ para igualdad de varianzas
+        \pause
+        Hipótesis nula: $H_0: \sigma^2_1 = \sigma^2_2
+$
+        \pause
+        Valor estadístico de prueba: $f = s^2_1/s^2_2$
+        Siendo $\alpha$ el grado insignificancia, por lo tanto $1 -\alpha$ cuantificaría el nivel de confianza.
+        \pause
+        \vspace{1px}
+        \begin{center}
+            \begin{tabular}{cc}
+            Hipótesis alternativa          &   Región de rechazo para una prueba de nivel $\alpha$\\
+            $H_a: \sigma^2_1 > \sigma^2_2$ & $f \geq F_{\alpha,m-1,n-1}$ \\
+            $H_a: \sigma^2_1 < \sigma^2_2$ & $f \leq F_{1-\alpha,m-1,n-1}$ \\
+            $H_a: \sigma^2_1 \neq \sigma^2_2$ & o $f \geq F_{\alpha/2,m-1,n-1}$ o $f \leq F_{1-\alpha/2,m-1,n-1}$ \\
+        \end{tabular}
+        \end{center}
+
+        \vspace{1px}
+
+        Como los valores críticos se tabulan sólo para $\alpha$ = 0.10, 0.05, 0.01 y 0.001. Con software
+estadístico se obtienen otros valores críticos $F$.
+      \end{frame}
+
+      \begin{frame}{Distribuciones F-Fisher. Ejemplo}
+          \begin{block}{Ejemplo}
+            La variabilidad en la cantidad de grasa presente en un lote de un complemento dietético, utilizada para un proceso de fabricación de un alimento, depende del origen del complemento. Un fabricante que recibe el complemento de dos proveedores \textbf{1} y \textbf{2}, hizo una comparación analizando muestras de ambos proveedores. Muestras de $n_1=10$ y $n_2=16$ mediciones de dos lotes produjeron las varianzas:
+
+            $S^2_1=1.25$ y $S^2_2=0.5$
+
+            ¿Presentan los datos evidencia suficiente para indicar que la variabilidad en el contenido de grasa es menor para el producto que se recibe del proveedor 2? Realice una prueba con un a o $\alpha$ = 0.05.
+          \end{block}
+      \end{frame}
+      \begin{frame}{Distribuciones F-Fisher. Ejemplo}
+          \begin{block}{Soluci\'on}
+              Tenemos nuestras hipótesis nula, la cual aceptamos a priori:
+
+              $H_a: \sigma^2_1 > \sigma^2_2\quad : \quad f \geq F_{\alpha,m-1,n-1}$
+
+              Y rechazamos si:
+
+              $f \geq F_{\alpha,m-1,n-1}$
+
+              Luego, debemos buscar en tablas con una exactitud de 0.05 el valor de $F_{tabla}$.
+              \pause
+              $f \geq 2.5876$
+
+              $f_{calculado} = \dfrac{1.25}{0.5}=2.5$
+              \pause
+              \vspace{0.2px}
+
+              Como 2.5 $<$ 2.5876 no se rechaza $H_0$, y se concluye con un $\alpha= 0.05$ que no existe suficiente evidencia para decir que la variabilidad del contenido de grasa del complemento del proveedor 2 es menor que la del complemento suministrado por el proveedor 1.
+          \end{block}
+      \end{frame}
+
+      \begin{frame}{Distribuciones F-Fisher. La Tabla}
+          \begin{figure}
+              \centering
+              \includegraphics[width=0.7\linewidth]{images/estadistica14}
+              \label{fig:estadistica14}
+          \end{figure}
+          La columna indica el grado de libertad del numerador y la fila el grado de libertad del denominador.
+          La Figura\ref{fig:estadistica14} muestra una sección de la tabla de la distribución F para el caso de un nivel de significancia de 10\%, es decir $\alpha = 0.1$. Aparece resaltado el valor de \textbf{F} cuando $\nu_1= 3$ y $\nu_2 = 6$ con nivel de confianza $1-\alpha  = 0.9$ es decir 90\%.
+
+
+
+      \end{frame}
+
+    \subsection*{Distribuciones T}
+    \begin{frame}{Distribución T}
+        \textbf{\begin{center}
+               \huge Distribución T
+        \end{center}}
+    \end{frame}
 
 \end{document}
